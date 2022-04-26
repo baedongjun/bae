@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class MemberVo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long mbrNo;
 	private String id;
+	private Long mbrNo;
 	private String name;
 
 	@Builder

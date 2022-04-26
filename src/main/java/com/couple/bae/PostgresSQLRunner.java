@@ -25,9 +25,9 @@ public class PostgresSQLRunner implements ApplicationRunner {
 			System.out.println(connection.getMetaData().getUserName());
 
 			Statement statement = connection.createStatement();
-			String sql = "CREATE TABLE t_product(product_no INTEGER NOT NULL, product_name VARCHAR(255), PRIMARY KEY (product_no))";
+			String sql = "CREATE TABLE member(id VARCHAR(5) NOT NULL, mbrNo INTEGER NULL, name VARCHAR(100), PRIMARY KEY (id))";
 			statement.executeUpdate(sql);
 		}
-		jdbcTemplate.execute("INSERT INTO t_product VALUES (1, 'Big shirt')");
+		jdbcTemplate.execute("INSERT INTO member VALUES ('1', 123456, '배동준')");
 	}
 }
